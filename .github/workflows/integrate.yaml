@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: touch "congrats.txt"
-#      - run: echo ${{ github.actor }} >> congrats.txt
+      - run: echo ${{ github.actor }} >> congrats.txt
       - run: echo "hello" >> congrats.txt
       - run: | 
           git config --global user.name "Jaineel Doshi" 
@@ -23,8 +23,4 @@ jobs:
           git add -A
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push
-#      - run: git config --global user.name "Jaineel Doshi" 
-#      - run: git config --global user.email "Jaineel.Doshi@fgsglobal.com"
-#      - run: git add -A
-#      - run: git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-#      - run: git push
+
