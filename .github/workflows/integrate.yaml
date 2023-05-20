@@ -20,5 +20,6 @@ jobs:
 #      - run: | 
       - run: git config --global user.name "Jaineel Doshi" 
       - run: git config --global user.email "Jaineel.Doshi@fgsglobal.com"
-      - run: git commit -am "${{ env.CI_COMMIT_MESSAGE }}"
+      - run: git add -A
+      - run: git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
       - run: git push
