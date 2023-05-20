@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
       - run: touch "congrats.txt"
 #      - run: echo ${{ github.actor }} >> congrats.txt
-#      - run: echo "hello" >> congrats.txt
+      - run: echo "hello" >> congrats.txt
 #      - run: | 
       - run: git config --global user.name "Jaineel Doshi" 
       - run: git config --global user.email "Jaineel.Doshi@fgsglobal.com"
