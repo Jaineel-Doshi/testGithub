@@ -18,7 +18,7 @@ jobs:
 #      - run: echo ${{ github.actor }} >> congrats.txt
 #      - run: echo "hello" >> congrats.txt
 #      - run: | 
-      - run: git config --global user.name "jaineel.doshi@fgsglobal.com}"
-      - run: git config --global user.email "username@users.noreply.github.com"
+      - run: git config --global user.name "Jaineel Doshi" 
+      - run: git config --global user.email "Jaineel.Doshi@fgsglobal.com"
       - run: git commit -am "${{ env.CI_COMMIT_MESSAGE }}"
       - run: git push
