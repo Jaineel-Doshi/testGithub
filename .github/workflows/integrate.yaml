@@ -12,8 +12,12 @@ jobs:
       CI_COMMIT_AUTHOR: Github
     steps:
       - uses: actions/checkout@v3
+      - run: pwd >> log.txt
       - run: echo "Congrats ${{ github.actor }}" >> log.txt
       - run: date >> log.txt
+      - run: pwd >> log.txt
+      - run: cd changeDirToHere
+      - run: pwd >> log.txt 
       - run: | 
           git config --global user.name "Jaineel Doshi" 
           git config --global user.email "Jaineel.Doshi@fgsglobal.com"
