@@ -8,8 +8,8 @@ jobs:
   congrats-on-pushing:
     runs-on: ubuntu-latest
     env: 
-      CI_COMMIT_MESSAGE: Continuous Integration 
-      CI_COMMIT_AUTHOR: Continuous Integration
+      CI_COMMIT_MESSAGE: CI/CD
+      CI_COMMIT_AUTHOR: Github
     steps:
       - uses: actions/checkout@v3
       - run: echo "Congrats ${{ github.actor }}" >> log.txt
