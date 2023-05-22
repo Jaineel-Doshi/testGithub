@@ -1,22 +1,19 @@
-name: Continuous Integration 
-
+name: github-action-practice
+run-name: ${{ github.actor }} - GitHub Actions
 on:
   push:
     branches:
       - master
-
-
 jobs: 
   congrats-on-pushing:
     runs-on: ubuntu-latest
     env: 
-      CI_COMMIT_MESSAGE: Continuous Integration Build Artifacts
-      CI_COMMIT_AUTHOR: Continuous Integration
+      CI_COMMIT_MESSAGE: Continuous Integration 
+      CI_COMMIT_AUTHOR: Continuous Integration Bot
     steps:
       - uses: actions/checkout@v3
-      - run: touch "congrats.txt"
-      - run: echo ${{ github.actor }} >> congrats.txt
-      - run: echo "hello" >> congrats.txt
+      - run: echo ${{ github.actor }} >> log.txt
+      - run: date >> log.txt
       - run: | 
           git config --global user.name "Jaineel Doshi" 
           git config --global user.email "Jaineel.Doshi@fgsglobal.com"
