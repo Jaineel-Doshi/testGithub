@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       CI_COMMIT_MESSAGE: Continuous Integration 
-      CI_COMMIT_AUTHOR: Continuous Integration Bot
+      CI_COMMIT_AUTHOR: Continuous Integration
     steps:
       - uses: actions/checkout@v3
-      - run: echo ${{ github.actor }} >> log.txt
+      - run: echo "Congrats ${{ github.actor }}" >> log.txt
       - run: date >> log.txt
       - run: | 
           git config --global user.name "Jaineel Doshi" 
